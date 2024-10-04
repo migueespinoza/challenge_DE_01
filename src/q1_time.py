@@ -24,3 +24,9 @@ def q1_time(file_path: str) -> List[Tuple[datetime.date, str]]:
 
     lista_usuario_max_tweets_por_fecha = [(x, y) for x, y in usuario_max_tweets_por_fecha[['date_only', 'username']].values]
     return lista_usuario_max_tweets_por_fecha
+
+
+if __name__ == '__main__':
+    file_path = "farmers-protest-tweets-2021-2-4.json"
+    result = q1_time(file_path)
+    print(result)
