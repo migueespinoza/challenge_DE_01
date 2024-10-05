@@ -13,7 +13,7 @@ def q3_memory(file_path: str) -> List[Tuple[str, int]]:
     dict_data = {}
     content_list = []
     with open(file_path) as json_file:
-        for line in json_file.readlines():
+        for line in json_file:
             json_obj = json.loads(line)
             content_list.append(json_obj['content'])
 

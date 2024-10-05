@@ -4,12 +4,13 @@ import polars as pl
 import json
 
 def q1_memory(file_path: str) -> List[Tuple[datetime.date, str]]:
+    
     dict_data = {}
     ids = []
     dates = []
     usernames = []
     with open(file_path) as json_file:
-        for line in json_file.readlines():
+        for line in json_file:
             json_obj = json.loads(line)
             ids.append(json_obj['id'])
             dates.append(json_obj['date'])
